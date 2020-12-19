@@ -24,23 +24,25 @@ const AllPosts = () => {
 
 
     return (
-        <div>
-            <h2>Blog posts</h2>
-            <h3>The BW</h3>
+        
             <div>
-                {allPostsData &&
-                allPostsData.map((post , index) => (
-                    <Link to={'/' + post.slug.current} key={post.slug.current}>
-                        <span key ={index}>
-                            <img src={post.mainImage.asset.url} alt='main'></img>
-                            <span>
-                                <h2>{post.title}</h2>
+                <h2>Blog posts</h2>
+                <h3>The BW</h3>
+                <div>
+                    {allPostsData &&
+                    allPostsData.map((post , index) => (
+                        <Link to={'/' + post.slug.current} key={post.slug.current}>
+                            <span key ={index}>
+                                <img src={post.mainImage.asset.url} alt='main'></img>
+                                <span>
+                                    <h2>{post.title}</h2>
+                                </span>
                             </span>
-                        </span>
-                    </Link>
-                ))}
+                        </Link>
+                    ))}
+                </div>
             </div>
-        </div>
+        
     )
 }
 
