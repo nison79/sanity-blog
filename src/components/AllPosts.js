@@ -24,22 +24,22 @@ const AllPosts = () => {
 
 
     return (
-        
-            <div>
-                <h2>Blog posts</h2>
-                <h3>The BW</h3>
-                <div>
-                    {allPostsData &&
-                    allPostsData.map((post , index) => (
-                        <Link to={'/' + post.slug.current} key={post.slug.current}>
-                            <span key ={index}>
-                                <img src={post.mainImage.asset.url} alt='main'></img>
-                                <span>
-                                    <h2>{post.title}</h2>
+            <div className= "min-h-screen p-12">
+                <div className="container mx-auto" >
+                    <h2 className= " pt-6 pb-24 text-base leading-6 font-bold sm:text-8xl sm:leading-7 flex justify-center">BW</h2>
+                    <div className="flex justify-center">
+                        {allPostsData &&
+                        allPostsData.map((post , index) => (
+                            <Link to={'/' + post.slug.current} key={post.slug.current}>
+                                <span key ={index}>
+                                    <img className="pl-3" src={post.mainImage.asset.url} alt='main'></img>
+                                    <span>
+                                        <h2 className="pl-3 pt-1 pb-12 sm:text-xl">{post.title}</h2>
+                                    </span>
                                 </span>
-                            </span>
-                        </Link>
-                    ))}
+                            </Link>
+                        ))}
+                    </div>
                 </div>
             </div>
         
